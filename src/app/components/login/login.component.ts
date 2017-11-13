@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginModel } from './login.model';
 import { UserService } from '../../services/user.service';
+import { Usermodel } from './user.model';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,7 @@ import { UserService } from '../../services/user.service';
 })
 export class LoginComponent implements OnInit {
 
+
   APPTITLE: String = "Application Login";
   USERS: String[] = ["rishu.gupta", "anish.gupta"];
 
@@ -18,7 +20,6 @@ export class LoginComponent implements OnInit {
 
 
   constructor() {
-
   }
 
   ngOnInit() {
@@ -28,7 +29,15 @@ export class LoginComponent implements OnInit {
 
   }
 
-  valiateUser = (loginID: String) => {
+  //Interface use for typesafety
+  testUser = (): Usermodel => {
+    let user ={
+      "firstName": "rishu"
+    }
+    return user;
+  }
+
+  valiateUser = (loginID: String): boolean => {
     let isUser: boolean = false;
     this.USERS.forEach(element => {
       if (loginID === element) isUser = true;

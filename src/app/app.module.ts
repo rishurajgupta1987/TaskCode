@@ -7,6 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
 import { UserService } from './services/user.service';
+import { TestComponent } from './components/test/test.component';
 
 
 
@@ -15,7 +16,8 @@ import { UserService } from './services/user.service';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
