@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class TaskManagerPage {
+export class TestcodePage {
   navigateTo() {
     return browser.get('/');
   }
