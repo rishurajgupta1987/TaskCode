@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DashboardInterface} from './dashboard.interface';
+import { DashboardInterface } from './dashboard.interface';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,7 +8,9 @@ import {DashboardInterface} from './dashboard.interface';
 export class DashboardComponent implements OnInit, DashboardInterface {
 
   appTitle = "Application Dashboard";
-
+  getTitle = (): String => {
+    return "rishu";
+  }
   constructor() { }
 
   ngOnInit() {
